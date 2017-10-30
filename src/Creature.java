@@ -67,7 +67,6 @@ public class Creature {
         if (fullness <= 6)
             status+="Oh, "+this.getName()+" is very hungry\n";
         if (happiness <= 0 || energy <= 0 || fullness <= 0){
-
             System.out.println("NOOOO, "+ this.getName()+" has died... my deepest condolences");
             System.exit(0);
         }
