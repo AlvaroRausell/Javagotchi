@@ -17,7 +17,7 @@ public class Creature {
 
     public void eat(){
         if(fullness >= 12)
-            System.out.println("Woops, " + this.getName() + " is already full");
+            System.out.println("Whoops, " + this.getName() + " is already full");
 
         else {
             fullness += 8;
@@ -32,7 +32,7 @@ public class Creature {
 
     public void sleep(){
         if(energy >= 12)
-            System.out.println("Woops, " + this.getName() + " is not sleepy");
+            System.out.println("Whoops, " + this.getName() + " is not sleepy");
 
         else {
             fullness -= 5;
@@ -66,7 +66,11 @@ public class Creature {
             status+="Oh, "+this.getName()+" is very tired\n";
         if (fullness <= 6)
             status+="Oh, "+this.getName()+" is very hungry\n";
+        if (happiness <= 0 || energy <= 0 || fullness <= 0){
 
+            System.out.println("NOOOO, "+ this.getName()+" has died... my deepest condolences");
+            System.exit(0);
+        }
         return status;
     }
 
